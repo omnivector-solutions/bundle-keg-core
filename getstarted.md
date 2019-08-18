@@ -29,5 +29,5 @@ Similarly, all of the charms used in this bundle expose endpoints that allow you
 
 
 ## Contact
-* [Omnivector Solutions](www.omnivector.solutions) <info@omnivector.solutions>
+* [Omnivector Solutions](https://www.omnivector.solutions) <info@omnivector.solutions>
 

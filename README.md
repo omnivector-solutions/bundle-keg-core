@@ -8,4 +8,4 @@ Kibana, Elasticsearch, Graylog
 
 
 ### Contact
-* [Omnivector Solutions](www.omnivector.solutions) <info@omnivector.solutions>
+* [Omnivector Solutions](https://www.omnivector.solutions) <info@omnivector.solutions>
