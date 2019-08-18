@@ -1,5 +1,9 @@
+# Welcome to Omnivector Solutions' KEG Core Bundle!
+Congratulations! You are deploying Omnivector Solutions' KEG Core bundle! {details_link}
+
+
 # Begin Logging Now!
-Following a successful deployment of this bundle, you should be able to start using the components of the stack immediately.
+Following a successful deployment of this bundle, you will be able to start using the components of the keg stack to collect and interpret your logs immediately.
 
 ### Graylog
 Visit the ip address of the Apache2 charm in your browser to access the Graylog UI.
