@@ -1,0 +1,51 @@
+series: bionic
+applications:
+  apache2:
+    charm: cs:apache2-26
+    num_units: 1
+    expose: true
+    options:
+      enable_modules: headers proxy_html proxy_http
+      vhost_http_template: |-
+        PExvY2F0aW9uICIvIj4KUmVxdWVzdEhlYWRlciBzZXQgWC1HcmF5bG9nLVNlcnZlci1VUkwgImh0
+        dHBzOi8vZ3JheWxvZy5wZW9wbGVkYXRhbGFicy5jb20vYXBpLyIKUHJveHlQYXNzIGh0dHA6Ly97
+        e2dyYXlsb2dfd2VifX0vClByb3h5UGFzc1JldmVyc2UgaHR0cDovL3t7Z3JheWxvZ193ZWJ9fS8K
+        PC9Mb2NhdGlvbj4KCgo8TG9jYXRpb24gIi9hcGkvIj4KUHJveHlQYXNzIGh0dHA6Ly97e2dyYXls
+        b2dfYXBpfX0vYXBpLwpQcm94eVBhc3NSZXZlcnNlIGh0dHA6Ly97e2dyYXlsb2dfYXBpfX0vYXBp
+        Lwo8L0xvY2F0aW9uPgo=
+  elasticsearch:
+    charm: cs:~omnivector/elasticsearch-38
+    num_units: 3
+    options:
+      cluster-name: es-graylog-prod
+      java-opts: -Xms4g -Xmx4g
+    constraints: mem=8G
+  graylog:
+    charm: cs:graylog-31
+    num_units: 1
+    expose: true
+    options:
+      index_replicas: 0
+      index_shards: 6
+      jvm_heap_size: 4G
+    constraints: mem=8G
+  kibana:
+    charm: cs:~omnivector/kibana-7
+    num_units: 1
+    expose: true
+    options:
+      kibana-password: changeme
+    constraints: mem=4G
+  mongodb:
+    charm: cs:mongodb-52
+    num_units: 1
+    constraints: mem=2G
+relations:
+- - apache2:reverseproxy
+  - graylog:website
+- - graylog:elasticsearch
+  - elasticsearch:client
+- - mongodb:database
+  - graylog:mongodb
+- - kibana:elasticsearch
+  - elasticsearch:client
