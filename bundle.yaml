@@ -10,12 +10,7 @@ applications:
     options:
       enable_modules: headers proxy_html proxy_http
       vhost_http_template: |-
-        PExvY2F0aW9uICIvIj4KUmVxdWVzdEhlYWRlciBzZXQgWC1HcmF5bG9nLVNlcnZlci1VUkwgImh0
-        dHBzOi8vZ3JheWxvZy5wZW9wbGVkYXRhbGFicy5jb20vYXBpLyIKUHJveHlQYXNzIGh0dHA6Ly97
-        e2dyYXlsb2dfd2VifX0vClByb3h5UGFzc1JldmVyc2UgaHR0cDovL3t7Z3JheWxvZ193ZWJ9fS8K
-        PC9Mb2NhdGlvbj4KCgo8TG9jYXRpb24gIi9hcGkvIj4KUHJveHlQYXNzIGh0dHA6Ly97e2dyYXls
-        b2dfYXBpfX0vYXBpLwpQcm94eVBhc3NSZXZlcnNlIGh0dHA6Ly97e2dyYXlsb2dfYXBpfX0vYXBp
-        Lwo8L0xvY2F0aW9uPgo=
+        PExvY2F0aW9uICIvIj4KICAgIFJlcXVlc3RIZWFkZXIgc2V0IFgtR3JheWxvZy1TZXJ2ZXItVVJMICJodHRwOi8ve3tzZXJ2ZXJuYW1lfX0vYXBpLyIKICAgIFByb3h5UGFzcyBodHRwOi8ve3tncmF5bG9nX3dlYn19LwogICAgUHJveHlQYXNzUmV2ZXJzZSBodHRwOi8ve3tncmF5bG9nX3dlYn19Lwo8L0xvY2F0aW9uPgoKPExvY2F0aW9uICIvYXBpLyI+CiAgICBQcm94eVBhc3MgaHR0cDovL3t7Z3JheWxvZ19hcGl9fS9hcGkvCiAgICBQcm94eVBhc3NSZXZlcnNlIGh0dHA6Ly97e2dyYXlsb2dfYXBpfX0vYXBpLwo8L0xvY2F0aW9uPgo=
   elasticsearch:
     charm: cs:~omnivector/elasticsearch
     annotations:
